@@ -1,0 +1,11 @@
+# MAC: clean up "open with" meny 
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+
+# display battery info in terminal (laptops)
+ioreg -l | grep Capacity
+
+# print calendar for 2013
+calendar Unix: pcal -b all -S 2012 > 2013.ps
+
+# to display library in Finder type:
+chflags nohidden ~/Library
