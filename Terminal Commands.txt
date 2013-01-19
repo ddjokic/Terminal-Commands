@@ -10,5 +10,20 @@ calendar Unix: pcal -b all -S 2012 > 2013.ps
 # to display library in Finder type:
 chflags nohidden ~/Library
 
-## resize all photos in a folder to XXX height with preserving aspect ratio ("-Z" option):
+# resize all photos in a folder to XXX height with preserving aspect ratio ("-Z" option):
 sips -Z XXX *.jpg 
+
+# disabling Spotlight systemwide - indexes will be left untouched
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+
+#enabling Spotlight after it had been disabled:
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+
+#count words in files of "extension" type in active folder:
+wc -w *.extension
+
+#count word in files of "extension" type in all sub-folders of active folder:
+wc -w */*.extension
+
+#count files of type "extension" in active folder:
+find . -name "*.extension" |wc -l
