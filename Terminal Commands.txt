@@ -27,3 +27,18 @@ wc -w */*.extension
 
 #count files of type "extension" in active folder:
 find . -name "*.extension" |wc -l
+
+#disable warning when changing file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+#enable Safari debug menu
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+
+#disable ping sidebar in iTunes
+defaults write com.apple.iTunes disablePingSidebar -bool true
+
+#change directory backwards, level is equal to number of '/'-1
+cd ../../..
+
+#show current path
+pwd
