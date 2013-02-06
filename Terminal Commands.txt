@@ -42,3 +42,11 @@ cd ../../..
 
 #show current path
 pwd
+
+#resize photos from terminal on with larger of two dims of "nnn" by maintaining aspect ratio ("-Z")
+sips -Z nnn *.jpg
+
+#copy source folder structure to new folder and create new folder if it doesn't exist
+ditto source destination
+ditto source dest/destination  #creates dest and dest folders if do not exist, copy source structure
+
