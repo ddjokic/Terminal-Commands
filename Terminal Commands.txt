@@ -50,3 +50,10 @@ sips -Z nnn *.jpg
 ditto source destination
 ditto source dest/destination  #creates dest and dest folders if do not exist, copy source structure
 
+#starting iPython - type in terminal:
+ipython notebook --no-browser
+#answer from terminal in form:
+# http://127.0.0.1:8888
+# open Firefox and in address bar paste terminal output, eg: http://127.0.0.1:8888 
+# Use Control-C to stop this server and shut down all kernels.
+
