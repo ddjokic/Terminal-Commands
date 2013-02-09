@@ -57,3 +57,6 @@ ipython notebook --no-browser
 # open Firefox and in address bar paste terminal output, eg: http://127.0.0.1:8888 
 # Use Control-C to stop this server and shut down all kernels.
 
+#make script executable, if there is shebang line in a script - run as filename.ext
+chmod a+x /path/to/file/filename.ext
+
