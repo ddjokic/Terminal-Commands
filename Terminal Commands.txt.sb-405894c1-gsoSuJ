@@ -1,8 +1,6 @@
 # MAC: clean up "open with" meny 
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
 
-#exit terminal
-exit
 # display battery info in terminal (laptops)
 ioreg -l | grep Capacity
 
@@ -61,10 +59,4 @@ ipython notebook --no-browser
 
 #make script executable, if there is shebang line in a script - run as filename.ext
 chmod a+x /path/to/file/filename.ext
-
-#display hidden files in finder(Mac) - required to restart Finder afterwards!
-defaults write com.apple.finder AppleShowAllFiles -bool true
-killall Finder
-
-#hide hidden file in finder (Mac): in above change "true" to "false"
 
