@@ -65,6 +65,13 @@ chmod a+x /path/to/file/filename.ext
 #display hidden files in finder(Mac) - required to restart Finder afterwards!
 defaults write com.apple.finder AppleShowAllFiles -bool true
 killall Finder
-
 #hide hidden file in finder (Mac): in above change "true" to "false"
+
+#show log of ALL Safari Downloads:
+sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'
+
+#delete log of ALL Safari Downloads:
+sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'
+
+
 
