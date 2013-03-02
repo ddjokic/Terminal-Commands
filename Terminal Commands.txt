@@ -3,6 +3,7 @@
 
 #exit terminal
 exit
+
 # display battery info in terminal (laptops)
 ioreg -l | grep Capacity
 
@@ -73,5 +74,9 @@ sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'selec
 #delete log of ALL Safari Downloads:
 sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'
 
+#measure wi-fi signal strength 
+/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I
 
+#check which application using net
+lsof -P -i -n | cut -f 1 -d " " | uniq
 
