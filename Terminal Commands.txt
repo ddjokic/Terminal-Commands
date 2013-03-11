@@ -82,3 +82,6 @@ lsof -P -i -n | cut -f 1 -d " " | uniq
 
 #vacuum mail database to gain some speed
 sqlite3 ~/Library/Mail/V2/MailData/Envelope\ Index vacuum;
+
+#combine pdf files input1.pdf and input2.pdf in one - output.pdf
+python '/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py' -o 'output.pdf' '/path/to/input1.pdf' '/path/to/input2.pdf'
