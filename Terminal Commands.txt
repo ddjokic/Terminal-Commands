@@ -80,3 +80,5 @@ sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delet
 #check which application using net
 lsof -P -i -n | cut -f 1 -d " " | uniq
 
+#vacuum mail database to gain some speed
+sqlite3 ~/Library/Mail/V2/MailData/Envelope\ Index vacuum;
