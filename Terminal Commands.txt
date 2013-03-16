@@ -85,3 +85,6 @@ sqlite3 ~/Library/Mail/V2/MailData/Envelope\ Index vacuum;
 
 #combine pdf files input1.pdf and input2.pdf in one - output.pdf
 python '/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py' -o 'output.pdf' '/path/to/input1.pdf' '/path/to/input2.pdf'
+
+#alias to scan running processes and find pid and name - usage: psgrep appname, after copy-pasting following:
+alias psgrep="ps -Aco pid,comm | sed 's/^ *//'| sed 's/:/ /'|grep -iE"
