@@ -88,3 +88,10 @@ python '/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/jo
 
 #alias to scan running processes and find pid and name - usage: psgrep appname, after copy-pasting following:
 alias psgrep="ps -Aco pid,comm | sed 's/^ *//'| sed 's/:/ /'|grep -iE"
+
+#turn wifi on and off:
+networksetup -setairportpower en0 on
+networksetup -setairportpower en0 off
+
+#check wifi netwrok interface (en0 above):
+networksetup -listallhardwareports
