@@ -95,3 +95,6 @@ networksetup -setairportpower en0 off
 
 #check wifi netwrok interface (en0 above):
 networksetup -listallhardwareports
+
+#keep computer awake for 1 hour:
+caffeinate -t 3600 &
