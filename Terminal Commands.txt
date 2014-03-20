@@ -98,3 +98,7 @@ networksetup -listallhardwareports
 
 #keep computer awake for 1 hour:
 caffeinate -t 3600 &
+
+#OS X Doc reset:
+rm ~/Library/Preferences/com.apple.Dock.plist
+killall Dock
