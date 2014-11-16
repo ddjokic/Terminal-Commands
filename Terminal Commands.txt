@@ -102,3 +102,12 @@ caffeinate -t 3600 &
 #OS X Doc reset:
 rm ~/Library/Preferences/com.apple.Dock.plist
 killall Dock
+
+#merge two folders:
+ditto ~/folder_A/merging_folder ~/folder_B/merging_folder
+
+#view download log:
+sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'
+
+#delete download log
+sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'
